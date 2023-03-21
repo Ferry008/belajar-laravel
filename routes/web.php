@@ -26,9 +26,59 @@ Route::get('/coba', function () {
 }) ;
 
 Route::get('/login', function () {
-    return view('login');
+    return view('login', [
+        'title' => 'Login',
+    ]);
 }) ;
 
 Route::get('/home', function () {
-    return view('home');
+    return view('home', [
+        'title' => 'Home',
+    ]);
 }) ;
+
+Route::get('/userb', function () {
+    $listMahasiswa = [
+        [
+            "nama" => "Ferry",
+            "nim" => "045123456",
+            "nilai" => 70
+        ],
+        [
+            "nama" => "Budi",
+            "nim" => "041112345",
+            "nilai" => 90
+        ],
+        [
+            "nama" => "Udin",
+            "nim" => "857543234",
+            "nilai" => 100
+        ],
+        [
+            "nama" => "Abdul",
+            "nim" => "042897654",
+            "nilai" => 60
+        ],
+        [
+            "nama" => "Bono",
+            "nim" => "042789456",
+            "nilai" => 90
+        ]
+        ];
+return view('userb', [
+    'title' => 'Nilai',
+
+    'dataMahasiswa' => $listMahasiswa
+]);});
+
+Route::get('/user', function () {
+$username = "Ferry";
+
+    return view('user', [
+        'user' => $username,
+        'usia' => 20,
+        'isMember' => false,
+        'grade' => 100
+    ]);
+}) ;
+
