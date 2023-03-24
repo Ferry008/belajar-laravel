@@ -1,5 +1,6 @@
 <?php
-
+use App\Http\Controllers\HomeController;
+use App\Http\Controllers\AuthController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -23,53 +24,11 @@ Route::get('/hello', function () {
 
 Route::get('/coba', function () {
     return view('coba');
-}) ;
+}) ;   
 
-Route::get('/login', function () {
-    return view('login', [
-        'title' => 'Login',
-    ]);
-}) ;
+Route::get('/home', [HomeController::class, 'home']);
 
-Route::get('/home', function () {
-    return view('home', [
-        'title' => 'Home',
-    ]);
-}) ;
-
-Route::get('/userb', function () {
-    $listMahasiswa = [
-        [
-            "nama" => "Ferry",
-            "nim" => "045123456",
-            "nilai" => 70
-        ],
-        [
-            "nama" => "Budi",
-            "nim" => "041112345",
-            "nilai" => 90
-        ],
-        [
-            "nama" => "Udin",
-            "nim" => "857543234",
-            "nilai" => 100
-        ],
-        [
-            "nama" => "Abdul",
-            "nim" => "042897654",
-            "nilai" => 60
-        ],
-        [
-            "nama" => "Bono",
-            "nim" => "042789456",
-            "nilai" => 90
-        ]
-        ];
-return view('userb', [
-    'title' => 'Nilai',
-
-    'dataMahasiswa' => $listMahasiswa
-]);});
+Route::get('/userb', [HomeController::class, 'index']);
 
 Route::get('/user', function () {
 $username = "Ferry";
@@ -82,3 +41,8 @@ $username = "Ferry";
     ]);
 }) ;
 
+Route::get('/about', [HomeController::class, 'about']);
+
+Route::get('/auth/login', [AuthController::class, 'login']);
+
+Route::get('/auth/register', [AuthController::class, 'register']);

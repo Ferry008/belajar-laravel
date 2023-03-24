@@ -43,6 +43,6 @@ item ke-{{ $i}}
     @endif
        <p class="text-primary-emphasis text-center" >Copyright {{ date('Y')}} Universitas Terbuka</p>
     
-       
+       <h2 class="text-center text-info"> Data Mahasiswa {{ $listMahasiswa }}</h2>
 </body>
 </html>

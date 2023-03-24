@@ -4,7 +4,7 @@
 <h1 class="text-center">UNIVERSITAS TERBUKA YOGYAKARTA</h1>
 <h2 class="text-center text-info">Jl. Bantul No.81 Kota Yogyakarta</h2>
 <div class="d-grid gap-2 col-6 mx-auto">
-<a type="button"href='/login' class="btn btn-primary btn-lg">MASUK</a>
+<a type="button"href='/auth/login' class="btn btn-primary btn-lg">MASUK</a>
 
 @endsection
     

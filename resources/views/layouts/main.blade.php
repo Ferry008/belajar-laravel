@@ -10,24 +10,11 @@
     
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg bg-body-tertiary">
-        <div class="container-fluid">
-          <a class="navbar-brand" href="/home">Univeritas Terbuka</a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-            <div class="navbar-nav">
-              <a class="nav-link {{ $title == 'Home' ? 'active' : ''}}" aria-current="page" href="/home">Home</a>
-              <a class="nav-link {{ $title == 'Login' ? 'active' : ''}}" href="/login">Login</a>
-              <a class="nav-link {{ $title == 'Nilai' ? 'active' : ''}}" href="/userb">Nilai</a>
-              <a class="nav-link disabled">About</a>
-            </div>
-          </div>
-        </div>
-      </nav>
+  {{-- navbar --}}
+<x-Navbar title="" />
       <div class="container mt-5">
-    @yield('content')  
+    {{-- content/isi --}}
+        @yield('content')  
     </div>
     <div class="fixed-bottom"><p class="text-primary-emphasis text-center" >Copyright {{ date('Y')}} Universitas Terbuka</p></div>
     

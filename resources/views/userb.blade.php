@@ -26,7 +26,7 @@
 @case($item['nilai']>= 90)
 <td>  A </td>
 @break
-@case($item['nilai']>= 80)
+@case($item['nilai']>= 70)
 <td>  B </td>
 @break
 @default
