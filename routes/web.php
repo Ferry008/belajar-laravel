@@ -28,7 +28,11 @@ Route::get('/coba', function () {
 
 Route::get('/home', [HomeController::class, 'home']);
 
-Route::get('/userb', [HomeController::class, 'index']);
+Route::get('/nilai', [HomeController::class, 'index']);
+Route::get('/detail/{id}', [HomeController::class, 'detail']);
+
+Route::get('/tutor', [HomeController::class, 'tutor']);
+Route::get('/detailtutor/{id}', [HomeController::class, 'detailtutor']);
 
 Route::get('/user', function () {
 $username = "Ferry";

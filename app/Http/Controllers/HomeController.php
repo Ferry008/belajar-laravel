@@ -2,51 +2,48 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Mahasiswa;
+use App\Models\Tutor;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
 {
     public function index()
     {
-        $listMahasiswa = [
-            [
-                "nama" => "Ferry",
-                "nim" => "045123456",
-                "nilai" => 70
-            ],
-            [
-                "nama" => "Budi",
-                "nim" => "041112345",
-                "nilai" => 90
-            ],
-            [
-                "nama" => "Udin",
-                "nim" => "857543234",
-                "nilai" => 100
-            ],
-            [
-                "nama" => "Abdul",
-                "nim" => "042897654",
-                "nilai" => 60
-            ],
-            [
-                "nama" => "Bono",
-                "nim" => "042789456",
-                "nilai" => 90
-            ]
-        ];
-        return view('userb', [
+        return view('nilai', [
             'title' => 'Nilai',
+            'dataMahasiswa' => Mahasiswa::all(),
 
-            'dataMahasiswa' => $listMahasiswa
         ]);
     }
-    public function login()
+
+    public function tutor()
     {
-        return view('login', [
-            'title' => 'Login',
+        return view('tutor', [
+            'title' => 'Tutor',
+            'dataTutor' => Tutor::all(),
+
         ]);
     }
+
+    public function detail(Request $request)
+    {
+        return view('detail', [
+            'title' => 'Detail Mahasiswa',
+            'id' => $request->id,
+            'data' => Mahasiswa::find($request->id)
+        ]);
+    }
+
+    public function detailtutor(Request $request)
+    {
+        return view('detailtutor', [
+            'title' => 'Detail Tutor',
+            'id' => $request->id,
+            'datatutor' => Tutor::find($request->id)
+        ]);
+    }
+
     public function home()
     {
         return view('home', [

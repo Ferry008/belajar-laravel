@@ -9,11 +9,12 @@
             <div class="navbar-nav">
                 <a class="nav-link {{ $title === 'Home' ? 'active' : '' }}" aria-current="page" href="/home">Home</a>
                 <a class="nav-link {{ $title === 'Login' ? 'active' : '' }}" href="/auth/login">Login</a>
-                <a class="nav-link {{ $title === 'Nilai' ? 'active' : '' }}" href="/userb">Nilai</a>
+                <a class="nav-link {{ $title === 'Nilai' ? 'active' : '' }}" href="/nilai">Nilai</a>
+                <a class="nav-link {{ $title === 'Tutor' ? 'active' : '' }}" href="/tutor">Tutor</a>
                 <a class="nav-link {{ $title === 'About' ? 'active' : '' }}" href="/about">About</a>
                 <form class="d-flex" role="search">
-                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                    <button class="btn btn-outline-success" type="submit">Search</button>
+                    <input class="form-control me-2" type="search" placeholder="Cari" aria-label="Search">
+                    <button class="btn btn-outline-success" type="submit">Cari</button>
                 </form>
             </div>
         </div>
