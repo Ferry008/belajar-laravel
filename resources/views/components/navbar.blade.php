@@ -12,7 +12,7 @@
                 <a class="nav-link {{ $title === 'Nilai' ? 'active' : '' }}" href="/nilai">Nilai</a>
                 <a class="nav-link {{ $title === 'Tutor' ? 'active' : '' }}" href="/tutor">Tutor</a>
                 <a class="nav-link {{ $title === 'About' ? 'active' : '' }}" href="/about">About</a>
-                <form class="d-flex" role="search">
+                <form class="d-flex left" role="search">
                     <input class="form-control me-2" type="search" placeholder="Cari" aria-label="Search">
                     <button class="btn btn-outline-success" type="submit">Cari</button>
                 </form>

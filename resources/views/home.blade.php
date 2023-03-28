@@ -11,7 +11,7 @@
             <div class="carousel-item">
                 <img src="/image/2.png" class="rounded mx-auto d-block" alt="...">
             </div>
-            <div class="carousel-item active">
+            <div class="carousel-item">
                 <img src="/image/3.png" class="rounded mx-auto d-block" alt="...">
             </div>
             <div class="carousel-item">
@@ -30,5 +30,5 @@
         </button>
     </div>
     <div class="d-grid gap-2 col-6 mx-auto">
-        <a type="button"href='/auth/login' class="btn btn-primary btn-lg">MASUK</a>
+        <a type="button"href='/auth/login' class="btn btn-primary btn-lg btn-bottom">MASUK</a>
     @endsection

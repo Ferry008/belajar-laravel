@@ -1,4 +1,5 @@
 <?php
+
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\AuthController;
 use Illuminate\Support\Facades\Route;
@@ -20,22 +21,29 @@ Route::get('/', function () {
 
 Route::get('/hello', function () {
     return view('hello');
-}) ;
+});
 
 Route::get('/coba', function () {
     return view('coba');
-}) ;   
+});
 
-Route::get('/home', [HomeController::class, 'home']);
+// Group Route
+Route::controller(HomeController::class)->group(function () {
+    Route::get('/home', 'home');
+    Route::get('/about', 'about');
 
-Route::get('/nilai', [HomeController::class, 'index']);
-Route::get('/detail/{id}', [HomeController::class, 'detail']);
+    Route::get('/nilai', 'index');
+    Route::get('/detail/{id}', 'detail');
 
-Route::get('/tutor', [HomeController::class, 'tutor']);
-Route::get('/detailtutor/{id}', [HomeController::class, 'detailtutor']);
+    Route::get('/tutor', 'tutor');
+    Route::get('/detailtutor/{id}', 'detailtutor');
+});
+
+Route::get('/auth/login', [AuthController::class, 'login']);
+Route::get('/auth/register', [AuthController::class, 'register']);
 
 Route::get('/user', function () {
-$username = "Ferry";
+    $username = "Ferry";
 
     return view('user', [
         'user' => $username,
@@ -43,10 +51,4 @@ $username = "Ferry";
         'isMember' => false,
         'grade' => 100
     ]);
-}) ;
-
-Route::get('/about', [HomeController::class, 'about']);
-
-Route::get('/auth/login', [AuthController::class, 'login']);
-
-Route::get('/auth/register', [AuthController::class, 'register']);
+});

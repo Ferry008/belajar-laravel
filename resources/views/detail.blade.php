@@ -8,9 +8,9 @@
         <h5 class="card-title text-uppercase fw-bold">{{ $data['nama'] }}</h5>
         <ul class='list-group list-group-flush'>
             <li class="list-group-item">NIM : {{ $data['nim'] }} </li>
-            <li class="list-group-item">Jenis Kelamin : {{ $data['personal']['gender']===1 ? 'Laki-laki' : 'Perempuan' }} </li>
-            <li class="list-group-item">Umur : {{ $data['personal']['usia']}} </li>
-            <li class="list-group-item">Alamat : {{ $data['personal']['alamat']}} </li>
+            <li class="list-group-item">Jenis Kelamin : {{ $data['gender']===1 ? 'Laki-laki' : 'Perempuan' }} </li>
+            <li class="list-group-item">Umur : {{ $data['usia']}} </li>
+            <li class="list-group-item">Alamat : {{ $data['alamat']}} </li>
         </ul>
     </div>
     <div class="card-footer">

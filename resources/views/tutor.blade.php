@@ -17,7 +17,7 @@
             @foreach ($dataTutor as $item)
                 <tr>
                     <td scope="row"> {{ $loop->index +1 }}</td>
-                    <td class="text-center"> {{ $item['id'] }} </td>
+                    <td class="text-center"> {{ $item['id_tutor'] }} </td>
                     <td> {{ $item['nama'] }} </td>
                     <td>
                         <x-button-link text="Detail" url="/detailtutor/{{ $item['id'] }}" btnColor="info" />

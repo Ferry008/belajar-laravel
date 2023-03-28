@@ -7,11 +7,11 @@
         <div class="card-body">
         <h5 class="card-title text-uppercase fw-bold">{{ $datatutor['nama'] }}</h5>
         <ul class='list-group list-group-flush'>
-            <li class="list-group-item">ID TUTOR : {{ $datatutor['id'] }} </li>
-            <li class="list-group-item">MATA KULIAH : {{ $datatutor['personal']['mk']}} </li>
-            <li class="list-group-item">Jenis Kelamin : {{ $datatutor['personal']['gender']===1 ? 'Laki-laki' : 'Perempuan' }} </li>
-            <li class="list-group-item">Umur : {{ $datatutor['personal']['usia']}} </li>
-            <li class="list-group-item">Alamat : {{ $datatutor['personal']['alamat']}} </li>
+            <li class="list-group-item">ID TUTOR : {{ $datatutor['id_tutor'] }} </li>
+            <li class="list-group-item">MATA KULIAH : {{ $datatutor['mk']}} </li>
+            <li class="list-group-item">Jenis Kelamin : {{ $datatutor['gender']===1 ? 'Laki-laki' : 'Perempuan' }} </li>
+            <li class="list-group-item">Umur : {{ $datatutor['usia']}} </li>
+            <li class="list-group-item">Alamat : {{ $datatutor['alamat']}} </li>
         </ul>
     </div>
     <div class="card-footer">
