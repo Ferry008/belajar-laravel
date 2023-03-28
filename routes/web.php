@@ -39,8 +39,10 @@ Route::controller(HomeController::class)->group(function () {
     Route::get('/detailtutor/{id}', 'detailtutor');
 });
 
-Route::get('/auth/login', [AuthController::class, 'login']);
-Route::get('/auth/register', [AuthController::class, 'register']);
+Route::controller(AuthController::class)->group(function () {
+Route::get('/auth/login', 'login');
+Route::get('/auth/register', 'register');
+});
 
 Route::get('/user', function () {
     $username = "Ferry";
