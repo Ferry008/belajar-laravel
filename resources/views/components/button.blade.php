@@ -1,1 +1,1 @@
-<button type="button" class="mx-1 btn btn-{{ $color}} {{ $size}}">{{ $text ?? ""}} </button>
+<button type="{{ $type }}" class="mx-1 btn btn-{{ $color}} {{ $size}}">{{ $text }} </button>

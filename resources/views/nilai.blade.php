@@ -34,7 +34,7 @@
                         @default
                             <td class="text-center"> C </td>
                     @endswitch
-                    <td class="btn-center">
+                    <td>
                         <x-button-link text="Detail" url="/detail/{{ $item['id'] }}" btnColor="info" />
                     </td>
                 </tr>

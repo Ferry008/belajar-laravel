@@ -28,6 +28,7 @@ Route::get('/coba', function () {
 });
 
 // Group Route
+//home
 Route::controller(HomeController::class)->group(function () {
     Route::get('/home', 'home');
     Route::get('/about', 'about');
@@ -39,9 +40,13 @@ Route::controller(HomeController::class)->group(function () {
     Route::get('/detailtutor/{id}', 'detailtutor');
 });
 
+//auth
 Route::controller(AuthController::class)->group(function () {
-Route::get('/auth/login', 'login');
-Route::get('/auth/register', 'register');
+    Route::get('/auth/login', 'login');
+    Route::get('/auth/register', 'register');
+    Route::post('/auth/register', 'storeRegister');
+    Route::post('/auth/login', 'storeLogin');
+    Route::post('/auth/logout', 'logout');
 });
 
 Route::get('/user', function () {

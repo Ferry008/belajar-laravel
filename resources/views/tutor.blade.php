@@ -16,7 +16,7 @@
         <tbody>{{-- Foreach --}}
             @foreach ($dataTutor as $item)
                 <tr>
-                    <td scope="row"> {{ $loop->index +1 }}</td>
+                    <td scope="row"> {{ $loop->index + 1 }}</td>
                     <td class="text-center"> {{ $item['id_tutor'] }} </td>
                     <td> {{ $item['nama'] }} </td>
                     <td>
