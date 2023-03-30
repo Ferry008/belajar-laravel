@@ -10,9 +10,6 @@
                 <li class="nav-item">
                     <a class="nav-link active" aria-current="page" href="/home">Home</a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="/auth/login">Login</a>
-                </li>
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
                         aria-expanded="false">
@@ -30,15 +27,27 @@
                 <li class="nav-item">
                     <a class="nav-link" href="/about">About</a>
                 </li>
-
-                <li>
+            </ul>
+            <ul class="nav-item">
                 <li class="nav-item">
+                    Selamat datang, {{ auth()->user()->name }} 
+                </li>
+                @auth
+                    {{-- Logout --}}
+                    <li class="new-item">                    
                     <form action="/auth/logout" method="post">
                         @csrf
                         <x-button type="submit" color="outline-warning" text="Log Out" />
                     </form>
-                </li>
+                    </li>
+                @else
+                    {{-- Login --}}
+                    <li clas="new-item">
+                        <a class="btn btn-primary" href="/auth/login">Login</a>
+                    </li>
+                @endauth
             </ul>
+
         </div>
     </div>
 </nav>

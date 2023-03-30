@@ -1,5 +1,7 @@
 @extends('layouts.main')
 @section('content')
+    <h1>Selamat Datang, {{ auth()->user()->name }} </h1>
+    <x-button-link url="/mahasiswa/tambah" text="Tambah Data Mahasiswa" />
     <img src="/image/Universitas Terbuka.png" class="rounded mx-auto d-block" alt="Univ Terbuka">
     <h2 class="text-center">DAFTAR NILAI MAHASISWA</h2>
 

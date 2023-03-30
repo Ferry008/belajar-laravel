@@ -33,17 +33,23 @@ Route::controller(HomeController::class)->group(function () {
     Route::get('/home', 'home');
     Route::get('/about', 'about');
 
-    Route::get('/nilai', 'index');
+    Route::get('/nilai', 'index')->middleware('auth');
     Route::get('/detail/{id}', 'detail');
 
     Route::get('/tutor', 'tutor');
     Route::get('/detailtutor/{id}', 'detailtutor');
+
+    Route::get('/mahasiswa/tambah', 'indexAddMahasiswa');
+    Route::post('/mahasiswa/tambah', 'storeMahasiswa');
+
+    Route::get('/mahasiswa/edit/{id}', 'indexUpdateMahasiswa');
+    Route::put('/mahasiswa/edit/', 'storeUpdateMahasiswa');
 });
 
 //auth
 Route::controller(AuthController::class)->group(function () {
-    Route::get('/auth/login', 'login');
-    Route::get('/auth/register', 'register');
+    Route::get('/auth/login', 'login')->middleware('guest') ->name('login');
+    Route::get('/auth/register', 'register')->middleware('guest');
     Route::post('/auth/register', 'storeRegister');
     Route::post('/auth/login', 'storeLogin');
     Route::post('/auth/logout', 'logout');
