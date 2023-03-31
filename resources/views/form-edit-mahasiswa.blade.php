@@ -4,10 +4,11 @@
 
     <div class="card p-5 mt-5">
 
-        <form action="/mahasiswa/edit" method="POST">
+        <form action="/mahasiswa/edit/{{ $data->id }}" method="POST">
 
             @csrf
             @method('PUT')
+
             {{-- Nama --}}
             <div class="mb-3">
                 <label for="nama" class="form-label">Nama</label>
@@ -25,7 +26,7 @@
             <div class="mb-3">
                 <label for="nim" class="form-label">NIM</label>
                 <input type="number" class="form-control @error('nim') is-invalid @enderror" id="nim"
-                    placeholder="Masukkan NIM Mahasiswa" name="nim" value="{{ old('nim', $data['nim']) }}">
+                    placeholder="Masukkan NIM Mahasiswa" name="nim" value="{{ old('nim', $data['nim']) }}" readonly>
 
                 @error('nim')
                     <div class='invalid-feedback'>
@@ -65,10 +66,10 @@
             <div class="mb-3">
                 <label for="gender" class="form-label">Jenis Kelamin</label>
                 <select class="form-control @error('gender') is-invalid @enderror" id="gender" name="gender">
-                    <option value="{{ $data['gender'] }}" disabled selected>
+                    {{-- <option value="{{ $data['gender'] }}" disabled selected>
                         {{ $data['gender'] === 0 ? 'Perempuan' : 'Laki-laki' }}
-                    </option>
-
+                    </option> --}}
+                    <option disable selected>{{ old('gender', $data['gender']) }}</option>
                     <option value="0">Perempuan</option>
                     <option value="1">Laki-laki</option>
                 </select>
@@ -94,6 +95,7 @@
             </div>
 
             <div class='d-grid mt-2'>
+                <x-button-link url="/detail/$id" btnColor="primary" text="Batal Ubah Data" />
                 <x-button type="submit" text="Ubah Data" color="outline-primary" />
             </div>
         </form>

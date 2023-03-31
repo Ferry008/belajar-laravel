@@ -2,7 +2,7 @@
 @section('content')
     <h1 class="text-info">Register</h1>
 
-    <div class="card p-5 mt-5">
+    <div class="card border-primary p-5 mt-5">
         <form action="/auth/register" method="POST">
             @csrf
             {{-- generated --}}

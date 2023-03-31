@@ -16,7 +16,7 @@
     {{-- content/isi --}}
         @yield('content')  
     </div>
-    <div class="fixed-bottom"><p class="text-primary-emphasis text-center" >Copyright {{ date('Y')}} Universitas Terbuka</p></div>
+    <div class="fixed-bottom"><p class="text-primary-emphasis text-center" >Copyright {{ date('Y')}} Universitas Terbuka Yogyakarta</p></div>
     
 </body>
 </html>

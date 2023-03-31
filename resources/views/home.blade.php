@@ -1,9 +1,9 @@
 @extends('layouts.main')
 @section('content')
-   {{-- <img src="/image/Universitas Terbuka.png" class="rounded mx-auto d-block" alt="Univ Terbuka"> --}} 
-   
+    {{-- <img src="/image/Universitas Terbuka.png" class="rounded mx-auto d-block" alt="Univ Terbuka"> --}}
+
     <h1 class="text-center text-info">UNIVERSITAS TERBUKA YOGYAKARTA</h1>
-        <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
+    <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
         <div class="carousel-inner">
             <div class="carousel-item active">
                 <img src="/image/kal1.jpg" class="rounded mx-auto d-block" alt="...">
@@ -24,8 +24,8 @@
         </button>
     </div>
     {{-- <div class="d-grid gap-2 col-6 mx-auto"> --}}
-    <div class="gap-5 col-3 mx-auto">
-        <a type="button" href='/auth/login' class="btn btn-primary btn-lg">MASUK</a>
-        <a type="button" href='/auth/register' class="btn btn-primary btn-lg">DAFTAR</a>
-    </div>
-    @endsection
+    {{-- <div class="gap-3 col-3 mx-auto">
+                    <a type="button" href='/auth/login' class="btn btn-primary">MASUK</a>
+            <a type="button" href='/auth/register' class="btn btn-primary">DAFTAR</a>
+       </div> --}}
+@endsection

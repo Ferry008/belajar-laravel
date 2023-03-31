@@ -1,12 +1,19 @@
 @extends('layouts.main')
 @section('content')
-    <img src="/image/Universitas Terbuka.png" class="d-block" alt="Univ Terbuka">
-    <h1>DETAIL DATA MAHASISWA {{ $id }}</h1>
-    <x-button-link url="/mahasiswa/edit/{{ $id }}" text="Edit" btnColor="warning" textColor="black" />
+    @if (session('success'))
+        <div class="alert alert-success alert-dismissible fade show" role="alert">
+            <strong>{{ session('success') }}</strong>
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="close"></button>
+        </div>
+    @endif
 
-    <div class="card" style="width: 18rem;">
+    <img src="/image/Universitas Terbuka.png" class="d-block" alt="Univ Terbuka">
+    <h5 class="text-info">DETAIL DATA MAHASISWA {{ $id }}</h5>
+
+
+    <div class="card" style="width: 30rem;">
         <div class="card-body">
-            <h5 class="card-title text-uppercase fw-bold">{{ $data['nama'] }}</h5>
+            <h2 class="card-title text-uppercase fw-bold">{{ $data['nama'] }}</h2>
             <ul class='list-group list-group-flush'>
                 <li class="list-group-item">NIM : {{ $data['nim'] }} </li>
                 <li class="list-group-item">Jenis Kelamin : {{ $data['gender'] === 1 ? 'Laki-laki' : 'Perempuan' }} </li>
@@ -15,6 +22,8 @@
             </ul>
         </div>
         <div class="card-footer">
+            <x-button-link url="/mahasiswa/edit/{{ $id }}" text="Edit Data" btnColor="warning"
+                textColor="black" />
             <x-button-link url="/nilai" btnColor="primary" text="Kembali" />
         </div>
     </div>

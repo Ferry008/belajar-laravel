@@ -33,7 +33,7 @@ Route::controller(HomeController::class)->group(function () {
     Route::get('/home', 'home');
     Route::get('/about', 'about');
 
-    Route::get('/nilai', 'index')->middleware('auth');
+    Route::get('/nilai', 'index');
     Route::get('/detail/{id}', 'detail');
 
     Route::get('/tutor', 'tutor');
@@ -43,7 +43,9 @@ Route::controller(HomeController::class)->group(function () {
     Route::post('/mahasiswa/tambah', 'storeMahasiswa');
 
     Route::get('/mahasiswa/edit/{id}', 'indexUpdateMahasiswa');
-    Route::put('/mahasiswa/edit/', 'storeUpdateMahasiswa');
+    Route::put('/mahasiswa/edit/{id}', 'storeUpdateMahasiswa');
+    
+    Route::delete('/mahasiswa/delete/{id}','deleteMahasiswa');
 });
 
 //auth
