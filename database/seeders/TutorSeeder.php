@@ -23,7 +23,8 @@ class TutorSeeder extends Seeder
                 "alamat" => "Temanggung, Jawa Tengah, Indonesia",
                 "gender" => 2,
                 "mk" => "IPEM4500",
-                "usia" => 50
+                "usia" => 50,
+                "mata_kuliah_id" => 1
             ], [
                 "id_tutor" => 45004,
                 "nama" => "Siti",
@@ -31,7 +32,8 @@ class TutorSeeder extends Seeder
                 "alamat" => "Magelang, Jawa Tengah, Indonesia",
                 "gender" => 2,
                 "mk" => "IDIK4500",
-                "usia" => 40
+                "usia" => 40,
+                "mata_kuliah_id" => 2
             ], [
                 "id_tutor" => 45003,
                 "nama" => "Maryatun",
@@ -39,7 +41,8 @@ class TutorSeeder extends Seeder
                 "alamat" => "Wonosobo, Jawa Tengah, Indonesia",
                 "gender" => 2,
                 "mk" => "HKUM4500",
-                "usia" => 36
+                "usia" => 36,
+                "mata_kuliah_id" => 3
             ], [
                 "id" => 45002,
                 "nama" => "Sarwono",
@@ -47,7 +50,8 @@ class TutorSeeder extends Seeder
                 "alamat" => "Sleman, Yogyakarta, Indonesia",
                 "gender" => 1,
                 "mk" => "MKDU4401",
-                "usia" => 36
+                "usia" => 36,
+                "mata_kuliah_id" => 4
             ], [
                 "id_tutor" => 45001,
                 "nama" => "Mahfud",
@@ -55,7 +59,8 @@ class TutorSeeder extends Seeder
                 "alamat" => "Bantul, Yogyakarta, Indonesia",
                 "gender" => 1,
                 "mk" => "PDGK4500",
-                "usia" => 48
+                "usia" => 48,
+                "mata_kuliah_id" => 5
             ]
         ]);
     }

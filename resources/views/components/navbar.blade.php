@@ -41,9 +41,9 @@
                         "Selamat datang, {{ auth()->user()->name }}"
                     </button>
                     <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="/nilai">Nilai</a></li>
+                        {{-- <li><a class="dropdown-item" href="/nilai">Nilai</a></li>
                         <li><a class="dropdown-item" href="/tutor">Tutor</a></li>
-                        <li>
+                        <li> --}}
                             <hr class="dropdown-divider">
                             <form action="/auth/logout" method="post">
                                 @csrf
